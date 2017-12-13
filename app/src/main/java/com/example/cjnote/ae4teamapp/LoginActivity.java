@@ -10,7 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.auth.api.Auth;
@@ -31,8 +30,6 @@ import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import org.w3c.dom.Text;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -48,22 +45,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     private long   backPressedTime = 0;
     final Context context = this;
     private TextView nicknameTextView;
-    @Override
-    public void onBackPressed() {
-        long tempTime = System.currentTimeMillis();
-        long intervalTime = tempTime - backPressedTime;
-
-        if (0 <= intervalTime && FINISH_INTERVAL_TIME >= intervalTime)
-        {
-            super.onBackPressed();
-        }
-        else
-        {
-            backPressedTime = tempTime;
-            Toast.makeText(getApplicationContext(), "뒤로가기 버튼을 한번더 누르면 종료됩니다.", Toast.LENGTH_SHORT).show();
-        }
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,6 +97,21 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
         if (mAuth.getCurrentUser() != null) {
             nicknameTextView.setText(mAuth.getCurrentUser().getDisplayName()+"님 환영합니다");
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        long tempTime = System.currentTimeMillis();
+        long intervalTime = tempTime - backPressedTime;
+        if (0 <= intervalTime && FINISH_INTERVAL_TIME >= intervalTime)
+        {
+            super.onBackPressed();
+        }
+        else
+        {
+            backPressedTime = tempTime;
+            Toast.makeText(getApplicationContext(), "뒤로가기 버튼을 한번더 누르면 종료됩니다.", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -254,6 +250,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             case 2:
                 Intent test3Intent = new Intent(LoginActivity.this,  Test3Activity.class);
                 startActivity(test3Intent);
+                finish();
+                overridePendingTransition(R.anim.rightin_activity,R.anim.leftout_activity);
                 break;
         }
     }

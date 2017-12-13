@@ -18,7 +18,15 @@
         </activity>
         <activity android:name=".Test2Activity" />
         <activity android:name=".Test1Activity" />
-        <activity android:name=".Test3Activity"></activity>
+        <activity
+            android:name=".Test3Activity"
+            android:label="설정">
+        </activity>
+        <activity
+            android:name=".userProfileActivity"
+            android:label="내 프로필"
+            android:theme="@style/userProfileTheme">
+        </activity>
     </application>
 
 </manifest>

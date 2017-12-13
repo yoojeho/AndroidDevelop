@@ -48,7 +48,9 @@ dependencies {
     // Google auth
     compile 'com.google.android.gms:play-services-auth:11.6.2'
 
+    implementation 'com.android.support:design:26.1.0'
 }
+
 
 
 
