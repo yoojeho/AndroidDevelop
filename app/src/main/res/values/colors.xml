@@ -5,6 +5,7 @@
     <color name="colorPrimaryDark">#7b7b7b</color>
     <color name="colorAccent">#FF4081</color>
     <color name="windowbackground">#fdfdfd</color>
-    <color name="userProfileBackground">#f5f3f3</color>
+    <color name="userProfileBackground">#f7f6ec</color>
+    <color name="userProfileText">#c6150201</color>
     <drawable name="bg_select">#e9eded</drawable>
 </resources>

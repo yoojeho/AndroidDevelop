@@ -6,4 +6,72 @@
     android:layout_height="match_parent"
     tools:context="com.example.cjnote.ae4teamapp.userProfileActivity">
 
+    <ImageView
+        android:id="@+id/userProfileFicture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/button_selector"
+        android:maxHeight="200dp"
+        android:maxWidth="200dp"
+
+        android:onClick="onClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--<Button-->
+        <!--android:id="@+id/uploadPictureButton"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:background="@drawable/button_selector"-->
+        <!--android:onClick="onClick"-->
+        <!--android:text="사진 변경"-->
+        <!--android:textSize="15sp"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/userProfileFicture" />-->
+
+    <TextView
+        android:id="@+id/userNickNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="닉네임"
+        android:textColor="@color/userProfileText"
+
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userProfileFicture"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userContactInfoTextView"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/profile_border"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="연락처정보"
+        android:textColor="@color/userProfileText"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userProfileFicture" />
+
+    <TextView
+        android:id="@+id/userEmailTextView"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/profile_border"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="이메일"
+        android:textColor="@color/userProfileText"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userContactInfoTextView" />
+
 </android.support.constraint.ConstraintLayout>
