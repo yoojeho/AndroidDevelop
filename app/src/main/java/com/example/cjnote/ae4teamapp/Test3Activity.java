@@ -108,6 +108,12 @@ public class Test3Activity extends AppCompatActivity {
 
             }
         });
+
+        if (mAuth.getCurrentUser() == null) {
+            Intent loginintent = new Intent(Test3Activity.this, LoginActivity.class);
+            startActivity(loginintent);
+            finish();
+        }
     }
     @Override
     public void onBackPressed() {

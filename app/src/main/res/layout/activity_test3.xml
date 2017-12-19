@@ -9,7 +9,7 @@
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:context="com.example.cjnote.ae4teamapp.Test3Activity">
 
@@ -212,18 +212,6 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logOutButton" />
-
-        <TextView
-            android:id="@+id/scrollViewTest"
-            android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:layout_marginBottom="4dp"
-            android:layout_weight="1"
-            android:text="testtesttesttestesttesttesttesttesttesttesesttestesttesttesttesttesttesttesttesttesttestesttestesttesttesttesttesttesttesttesttesttestesttestesttesttesttesttesttesttesttesttesttestesttestesttesttesttesttesttesttesttesttesttestesttestesttesttesttesttesttesttesttesttesttestesttestesttesttesttesttesttesttesttesttesttestesttestesttesttesttesttesttesttesttesttesttestesttestesttesttesttesttesttesttesttesttesttestesttestesttesttesttesttesttesttesttesttesttestesttestesttesttesttesttesttesttesttesttesttestttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttestttesttesttesttesttesttest"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/withdrawalButton" />
 
     </android.support.constraint.ConstraintLayout>
 
